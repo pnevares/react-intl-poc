@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.css";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <main>
-      <header>This is the title</header>
+      <header>{t("TITLE")}</header>
       <article>
-        <p>Hello house.</p>
-        <p>Hello city.</p>
-        <p>Hello country.</p>
-        <p>Hello world.</p>
+        <p>{t("HELLO_HOUSE")}</p>
+        <p>{t("HELLO_CITY")}</p>
+        <p>{t("HELLO_COUNTRY")}</p>
+        <p>{t("HELLO_WORLD")}</p>
       </article>
     </main>
   );
